@@ -1,0 +1,67 @@
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    .label {
+        margin-bottom: 10px;
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+
+        .name {
+            width: 100%;
+
+            &:nth-child(1) {
+                margin-right: 10px;
+            }
+        }
+
+        .decor {
+            margin: 0 10px 0 10px;
+        }
+    }
+}
+
+.form-input {
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    outline: none;
+
+    &:focus {
+        border: 2px solid orange;
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    &.date {
+        width: 70px;
+    }
+
+    &.date::placeholder {
+        text-align: center;
+    }
+
+    &.date:focus:placeholder-shown::placeholder {
+        opacity: 0;
+    }
+
+    &.cvv {
+        width: 50px;
+    }
+}
+
+.message {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    resize: none;
+    outline: none;
+
+    &:focus {
+        border: 2px solid orange;
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    }
+}
